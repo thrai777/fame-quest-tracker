@@ -24,6 +24,7 @@ function DeliveryProgress({ quest }: { quest: Quest }) {
       <div
         className="progress"
         role="progressbar"
+        aria-label={`${quest.name}：${d.item}の納品進捗 ${d.collected}/${d.required}`}
         aria-valuenow={percent}
         aria-valuemin={0}
         aria-valuemax={100}
