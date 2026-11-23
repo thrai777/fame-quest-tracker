@@ -1,0 +1,14 @@
+# Go
+/bin/
+*.test
+*.out
+
+# App data (local persistence, added later)
+data/*.json
+
+# Node / frontend
+node_modules/
+web/dist/
+
+# Misc
+.DS_Store
