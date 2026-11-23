@@ -12,7 +12,7 @@ import (
 func TestHealth(t *testing.T) {
 	s := New(domain.SeedQuests())
 	rec := httptest.NewRecorder()
-	req := httptest.NewRequest(http.MethodGet, "/healthz", nil)
+	req := httptest.NewRequest(http.MethodGet, "/health", nil)
 	s.Handler().ServeHTTP(rec, req)
 
 	if rec.Code != http.StatusOK {

@@ -22,7 +22,7 @@ func New(quests []domain.Quest) *Server {
 // Handler returns the HTTP routing table for the API.
 func (s *Server) Handler() http.Handler {
 	mux := http.NewServeMux()
-	mux.HandleFunc("GET /healthz", s.handleHealth)
+	mux.HandleFunc("GET /health", s.handleHealth)
 	mux.HandleFunc("GET /api/quests", s.handleListQuests)
 	return mux
 }
