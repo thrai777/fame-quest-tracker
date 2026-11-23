@@ -1,5 +1,13 @@
 # web
 
-React + TypeScript + Vite のフロントエンドをここに配置します（実装は計画の2週目）。
+React + TypeScript + Vite のフロントエンドです。
 
-開発時は Vite の proxy 経由で Go API（`http://localhost:8080`）を叩く想定です。
+## 開発
+
+前提: Go API が `http://localhost:8080` で起動していること（リポジトリ直下で `go run ./cmd/server`）。
+
+```bash
+npm install
+npm run dev   # http://localhost:5173 （/api と /health は Vite の proxy で API へ転送）
+npm run build # 型チェック + 本番ビルド
+```

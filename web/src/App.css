@@ -1,0 +1,109 @@
+.app {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 24px 16px 48px;
+}
+
+header h1 {
+  font-size: 1.5rem;
+  margin: 0 0 4px;
+}
+
+.subtitle {
+  margin: 0 0 4px;
+  color: #555;
+}
+
+.summary {
+  margin: 0 0 8px;
+  font-weight: 600;
+}
+
+.quest-list {
+  list-style: none;
+  margin: 16px 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.quest-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 12px 16px;
+  background: #fff;
+}
+
+.quest-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.quest-name {
+  font-weight: 700;
+}
+
+.status {
+  font-size: 0.8rem;
+  padding: 2px 8px;
+  border-radius: 999px;
+  border: 1px solid #ccc;
+  white-space: nowrap;
+}
+
+.status-in_progress {
+  background: #e8f3ff;
+  border-color: #9ec7f5;
+}
+
+.status-completed {
+  background: #e6f7e6;
+  border-color: #9ad69a;
+}
+
+.status-failed {
+  background: #fdeaea;
+  border-color: #f0a3a3;
+}
+
+.quest-meta {
+  display: flex;
+  gap: 12px;
+  margin-top: 6px;
+  color: #444;
+  font-size: 0.9rem;
+}
+
+.quest-note {
+  margin-top: 6px;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.delivery {
+  margin-top: 10px;
+}
+
+.delivery-text {
+  font-size: 0.9rem;
+  margin-bottom: 4px;
+}
+
+.progress {
+  height: 8px;
+  background: #eee;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  background: #4a90d9;
+}
+
+.error {
+  color: #b00020;
+}

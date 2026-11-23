@@ -32,6 +32,14 @@ curl http://localhost:8080/health
 curl http://localhost:8080/api/quests
 ```
 
+フロントエンド（要 API 起動）:
+
+```bash
+cd web
+npm install
+npm run dev   # http://localhost:5173
+```
+
 ## API
 
 | メソッド | パス | 説明 |
@@ -50,7 +58,7 @@ go test ./...
 
 - [x] v0.0 プロジェクト雛形（ヘルスチェック＋クエスト一覧API）
 - [ ] クエストの状態変更・追加API
-- [ ] Reactフロント（一覧画面）
+- [x] Reactフロント（一覧画面）
 - [ ] 納品カウンタと名声レベル計算
 - [ ] JSONファイルへの永続化とエクスポート／インポート
 - [ ] Cloudflare Pages公開（v0.1）
