@@ -28,7 +28,7 @@
 go run ./cmd/server
 
 # 動作確認
-curl http://localhost:8080/healthz
+curl http://localhost:8080/health
 curl http://localhost:8080/api/quests
 ```
 
@@ -36,7 +36,7 @@ curl http://localhost:8080/api/quests
 
 | メソッド | パス | 説明 |
 |---|---|---|
-| GET | `/healthz` | ヘルスチェック |
+| GET | `/health` | ヘルスチェック |
 | GET | `/api/quests` | クエスト一覧 |
 
 ## テスト
