@@ -21,7 +21,13 @@ function DeliveryProgress({ quest }: { quest: Quest }) {
         {d.item} {d.collected}/{d.required}
         {remaining > 0 ? `（あと ${remaining}）` : '（納品可能）'}
       </div>
-      <div className="progress" role="progressbar" aria-valuenow={percent} aria-valuemin={0} aria-valuemax={100}>
+      <div
+        className="progress"
+        role="progressbar"
+        aria-valuenow={percent}
+        aria-valuemin={0}
+        aria-valuemax={100}
+      >
         <div className="progress-bar" style={{ width: `${percent}%` }} />
       </div>
     </div>
@@ -33,7 +39,9 @@ function QuestCard({ quest }: { quest: Quest }) {
     <li className="quest-card">
       <div className="quest-head">
         <span className="quest-name">{quest.name}</span>
-        <span className={`status status-${quest.status}`}>{STATUS_LABEL[quest.status]}</span>
+        <span className={`status status-${quest.status}`}>
+          {STATUS_LABEL[quest.status]}
+        </span>
       </div>
       <div className="quest-meta">
         <span>{quest.points} pt</span>
@@ -73,7 +81,9 @@ export default function App() {
     <div className="app">
       <header>
         <h1>fame-quest-tracker</h1>
-        <p className="subtitle">『ファイアーエムブレム 万紫千紅』人助け・名声管理</p>
+        <p className="subtitle">
+          『ファイアーエムブレム 万紫千紅』人助け・名声管理
+        </p>
         {!loading && !error && (
           <p className="summary">
             進行中 {inProgress.length} 件 ・ 獲得予定 {totalPoints} pt

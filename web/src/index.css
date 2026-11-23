@@ -4,7 +4,12 @@
 
 body {
   margin: 0;
-  font-family: system-ui, -apple-system, 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', sans-serif;
+  font-family:
+    system-ui,
+    -apple-system,
+    'Hiragino Kaku Gothic ProN',
+    'Noto Sans JP',
+    sans-serif;
   background: #f7f7f5;
   color: #222;
 }
