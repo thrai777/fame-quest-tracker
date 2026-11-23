@@ -23,7 +23,12 @@
 
 ## セットアップ
 
+ツール（Go / Node）のバージョンは [mise](https://mise.jdx.dev/) で管理しています（`mise.toml` が正）。
+
 ```bash
+# ツール導入
+mise install
+
 # APIサーバー起動（デフォルト :8080）
 go run ./cmd/server
 
@@ -63,6 +68,11 @@ go test ./...
 - [ ] JSONファイルへの永続化とエクスポート／インポート
 - [ ] Cloudflare Pages公開（v0.1）
 - [ ] 独自ドメイン＋Tunnel＋Access（v0.2）
+
+## 依存関係の更新ルール
+
+- ライブラリ（Go モジュール / npm）と GitHub Actions の更新は、Dependabot が週次で PR を作成する。CI が通ったものから取り込む
+- ツール（Go / Node）のバージョンは `mise.toml` で管理し、更新は動作確認のうえ PR で上げる
 
 ## ライセンス
 
