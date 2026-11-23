@@ -23,13 +23,26 @@
 
 ## セットアップ
 
+ツール（Go / Node）のバージョンは [mise](https://mise.jdx.dev/) で管理しています（`mise.toml` が正）。
+
 ```bash
+# ツール導入
+mise install
+
 # APIサーバー起動（デフォルト :8080）
 go run ./cmd/server
 
 # 動作確認
 curl http://localhost:8080/health
 curl http://localhost:8080/api/quests
+```
+
+フロントエンド（要 API 起動）:
+
+```bash
+cd web
+npm install
+npm run dev   # http://localhost:5173
 ```
 
 ## API
@@ -50,11 +63,16 @@ go test ./...
 
 - [x] v0.0 プロジェクト雛形（ヘルスチェック＋クエスト一覧API）
 - [ ] クエストの状態変更・追加API
-- [ ] Reactフロント（一覧画面）
+- [x] Reactフロント（一覧画面）
 - [ ] 納品カウンタと名声レベル計算
 - [ ] JSONファイルへの永続化とエクスポート／インポート
 - [ ] Cloudflare Pages公開（v0.1）
 - [ ] 独自ドメイン＋Tunnel＋Access（v0.2）
+
+## 依存関係の更新ルール
+
+- ライブラリ（Go モジュール / npm）と GitHub Actions の更新は、Dependabot が週次で PR を作成する。CI が通ったものから取り込む
+- ツール（Go / Node）のバージョンは `mise.toml` で管理し、更新は動作確認のうえ PR で上げる
 
 ## ライセンス
 

@@ -1,0 +1,6 @@
+# ツールバージョンは mise で管理する（開発・CI共通）
+# 導入: mise install
+[tools]
+go = "1.27.4"
+node = "26.13.1"
+golangci-lint = "2.15.0"
